@@ -1,4 +1,8 @@
-from distutils.core import setup
+try:
+    from setuptools import setup
+except ImportError:
+    # This package will not be re-distributable
+    from distutils.core import setup
 
 with open("README.rst") as f:
     readme = f.read()
